@@ -28,6 +28,7 @@ void logger(int level, const char* format, ...)
 
     sprintf(buf, "[%s][%s:%d][%s]", flags, __FILENAME__, __LINE__, __FUNCTION__);
     strcat(buf, format);
+    strcat(buf, "\n");
 
     va_list args;
     va_start(args, format);
